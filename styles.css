@@ -26,8 +26,8 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 44em 21em 1fr;
-    grid-template-rows: minmax(100px, 1fr) auto 200px 200px 200px;
+    grid-template-columns: 1fr 48em 21em 1fr;
+    grid-template-rows: minmax(100px, 1fr) auto auto auto 200px;
     grid-template-areas: 
         'empty-l    header          header      empty-r'
         '.          article         aside       .'
@@ -260,7 +260,7 @@ ARTICLE
 
 article {
     grid-area: article;
-    background-color: var(--gold);
+    /* background-color: var(--gold); */
     /* height: 600px; */
 }
 
@@ -417,15 +417,87 @@ ARTICLE-FOOTER
 
 .article-footer {
     grid-area: article-footer;
-    background-color: var(--dark-purp);
+    /* background-color: var(--dark-purp); */
     /* height: 200px; */
+    display: flex;
+    justify-content: space-between;
 }
+
+.issue-promotion {
+    display: flex;
+}
+
+.issue-promotion-cover {
+    padding-bottom: 5em;
+}
+
+.issue-promotion-links {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    background-color: white;
+    /* width: 100%; */
+}
+
+
+.issue-promotion-links button{
+    /* width: 100%; */
+    border: none;
+    border-radius: 0.25em;
+    color: white;
+    font-weight: 600;
+    padding: 0.5em 1.4em;
+    margin: 0.5em 0.5em;
+    cursor: pointer;
+}
+
+.issue-promotion-links button:hover{
+    filter: brightness(85%);
+}
+
+
+
+/* ===============
+PROMOTED STORIES
+==================*/
 
 .promoted-stories {
     grid-area: promoted;
-    background-color: var(--gold);
-    /* height: 200px; */
+    /* background-color: var(--gold); */
+    margin-bottom: 6em;
 }
+
+.promoted-stories-links {
+    display: flex;
+    gap: 1em;
+    font-weight: 600;
+    font-size: 1.25rem;
+    /* background-color: red; */
+}
+
+.promoted-stories-links figure{
+    /* background-color: yellow; */
+    /* border: 1px solid green; */
+    margin: 1em 0 1em 0;
+}
+
+.promoted-stories-links img {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===============
+FOOTER
+==================*/
 
 footer {
     grid-area: footer;
