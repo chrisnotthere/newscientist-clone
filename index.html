@@ -99,7 +99,7 @@
                             <li><a href="#">Podcasts</a></li>
                             <li><a href="#">Video</a></li>
                             <li><a href="#">Technology</a></li>
-                            <li><a href="#">Space</a></li>
+                            <li><a href="#" class="space-link">Space</a></li>
                             <li><a href="#">Physics</a></li>
                             <li><a href="#">Health</a></li>
                             <li>
@@ -209,5 +209,21 @@
     
 
         </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        const nav = document.querySelector("nav");
+        var sticky = nav.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+        }
+
+    </script>
     </body>
 </html>
