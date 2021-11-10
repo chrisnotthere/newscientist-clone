@@ -12,6 +12,7 @@
     --dark-blue :#272d86;
     --med-blue :#005587;
     --med-blue-hover :#4a83a1;
+    --pinterest-red : #cb2027;
 
 
 }
@@ -27,13 +28,13 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 48em 21em 1fr;
-    grid-template-rows: minmax(100px, 1fr) auto auto auto 200px;
+    grid-template-rows: minmax(100px, 1fr) auto auto auto auto;
     grid-template-areas: 
         'empty-l    header          header      empty-r'
         '.          article         aside       .'
         '.          article-footer  .           .'
         '.          promoted        promoted    .'
-        'footer     footer          footer      footer'
+        'empty-fl   footer          footer      empty-fr'
         ;
 }
 
@@ -45,6 +46,16 @@
 .empty-r {
     grid-area: empty-r;
     border-bottom: 1pt solid var(--grey);
+}
+
+.empty-footer-l {
+    grid-area: empty-fl;
+    background: var(--light-grey);
+}
+
+.empty-footer-r {
+    grid-area: empty-fr;
+    background: var(--light-grey);
 }
 
 .sticky {
@@ -302,17 +313,8 @@ article {
     background-color: #ff5700;
 }
 
-.article-info {
-    margin-top: 0.5em;
-}
-
-.article-info span{
-    font-weight: 800;
-    margin-right: 0.5em;
-}
-
-.article-info p {
-    display: inline;
+.social-pinterest {
+    background-color: var(--pinterest-red);
 }
 
 .article-content {
@@ -485,22 +487,132 @@ PROMOTED STORIES
     display: inline-block;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* ===============
 FOOTER
 ==================*/
 
 footer {
     grid-area: footer;
-    background-color: var(--orange);
+    background-color: var(--light-grey);
     /* height: 400px; */
+}
+
+footer h3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 1em 0 1em;
+}
+
+.email-signup {
+    display: flex;
+    gap: 1em;
+    /* justify-content: space-around; */
+    margin-bottom: 1em;
+}
+
+.email-signup input {
+    background: none;
+    border: none;
+    border-bottom: 2pt solid black;
+    width: 30%;
+    /* size: 500; */
+}
+
+.email-signup button {
+    color: white;
+    font-weight: 600;
+    background-color: var(--med-blue);
+    border: none;
+    padding: 0.5em 4em;
+    border-radius: 0.25em;
+}
+
+.email-signup button:hover {  
+    filter: brightness(85%);
+    cursor: pointer;
+}
+
+.footer-text-links {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+/* background-color: red; */
+}
+
+.footer-text-links p {  
+    border-right: 2pt solid black;
+    padding-right: 0.5em;
+    margin: 0.5em 0;
+}
+
+.footer-text-links p:last-child {  
+    border-right: none;
+}
+
+.footer-text-links p:hover {  
+    color: var(--aqua);
+    cursor: pointer;
+}
+
+.cookies-container {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cookies-btn {
+    background-color: var(--med-blue);
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    margin: 1em 0;
+}
+
+.cookies-btn:hover {
+    filter: brightness(85%);
+    cursor: pointer;
+}
+
+.footer-buttons {
+    /* background-color: red; */
+
+}
+
+.footer-buttons p {
+    margin-bottom: 1em;
+}
+
+.footer-button-links {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.footer-footer {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.back-to-top {
+    /* background-color: red; */
+    display: flex;
+    gap: 2em;
+    align-items: center;
+
+}
+
+.back-to-top:hover {
+    cursor: pointer;
+}
+
+.back-to-top span {
+    /* display: inline; */
+    /* background-color: yellow; */
+    width: 80px;
 }
