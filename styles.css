@@ -1,9 +1,4 @@
 :root {
-    --gold: #fda403;
-    --orange: #e8751a;
-    --light-purp: #c51350;
-    --dark-purp: #8a1253;
-
     --aqua: #00b3e5;
     --dark-aqua :#26a3c5;
     --grey: #999;
@@ -13,13 +8,7 @@
     --med-blue :#005587;
     --med-blue-hover :#4a83a1;
     --pinterest-red : #cb2027;
-
-
 }
-
-/* div, footer, article, aside, header {
-    border: 1pt solid red;
-} */
 
 * {
     font-family: Titillium Web,Helvetica,Trebuchet MS,Arial,sans-serif;
@@ -84,24 +73,17 @@ header {
 .header-top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* place-items: stretch; */
 }
 
 
 .header-left span{
     color: var(--aqua);
     font-size: 14pt;
-    /* font-weight: 100; */
 }
 
 .header-left p{
     color: var(--grey);
-    /* font-weight: 600; */
     font-family: "PT Serif",Georgia,serif!important;
-}
-
-.header-center {
-    /* width: auto; */
 }
 
 .header-right {
@@ -139,7 +121,6 @@ nav {
 .nav-links {
     width: 100%;
     display: flex;
-    /* background-color: violet; */
     margin-bottom: -0.5rem;
 }
 
@@ -157,7 +138,6 @@ nav {
 .link-arrow {
     transform: rotate(90deg);
     content: "»";
-    /* color: red; */
 }
 
 .right-links {
@@ -168,11 +148,8 @@ nav {
     color: var(--aqua);
 }
 
-
 .nav-options {
-    /* background-color: red; */
     display: flex;
-    /* padding-bottom: 0.5em; */
 }
 
 .nav-options button {
@@ -183,17 +160,12 @@ nav {
 }
 
 .nav-options button:hover {
-    /* background-color: red; */
     text-decoration: underline;
     color: var(--grey);
 }
 
 .nav-options button span {
-    display: inline;
-}
-
-.icon {
-    /* background-color: red; */
+    font-weight: 700;
 }
 
 nav ul a {
@@ -217,15 +189,10 @@ aside {
 }
 
 .aside-content {
-    /* background-color: pink; */
     display: flex;
     flex-direction: column;
     padding: 0.5em;
     align-items: center;
-}
-
-.aside-content-top {
-
 }
 
 .aside-content-top ul {
@@ -255,7 +222,6 @@ aside {
     font-size: 17pt;
     margin-bottom: 0.25em;
     color: var(--dark-grey);
-    /* font-weight: 900; */
     align-items: center;
 }
 
@@ -271,18 +237,13 @@ ARTICLE
 
 article {
     grid-area: article;
-    /* background-color: var(--gold); */
-    /* height: 600px; */
 }
 
 .article-title {
     font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: -0.0375rem;
-    /* line-height: 2rem; */
     margin: 0.5em 0;
-    /* font-family: Titillium Web,Helvetica,Trebuchet MS,Arial,sans-serif; */
-
 }
 
 .article-socials {
@@ -317,8 +278,22 @@ article {
     background-color: var(--pinterest-red);
 }
 
+.article-info {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.article-info span {
+    font-weight: 700;
+}
+
 .article-content {
     margin-top: 1em;
+}
+
+.article-content p {
+    line-height: 1.4;
 }
 
 .article-author {
@@ -333,9 +308,7 @@ article {
 }
 
 .article-image {
-    /* width: 100%; */
     left: 0;
-    /* position: absolute; */
     margin: 0.5em 0 1em 0;
     font-size: 0.8rem;
 }
@@ -343,7 +316,6 @@ article {
 .image-caption {
     font-weight: 900;
 }
-
 
 .readmore {
     margin: 1em 0;
@@ -355,7 +327,6 @@ article {
 .readmore span {
     color: var(--aqua);
     cursor: pointer;
-    /* font-size: 0.9rem; */
 }
 
 .references {
@@ -381,11 +352,9 @@ article {
 }
 
 .topics-links {
-    margin: 1.5em 0;
+    margin: 3em 0;
     display: flex;
-    /* background-color: red; */
     align-items: center;
-    
 }
 
 .topics-links p {
@@ -410,17 +379,12 @@ article {
     background-color: var(--med-blue-hover);
 }
 
-
-
-
 /* ===============
 ARTICLE-FOOTER 
 ==================*/
 
 .article-footer {
     grid-area: article-footer;
-    /* background-color: var(--dark-purp); */
-    /* height: 200px; */
     display: flex;
     justify-content: space-between;
 }
@@ -430,20 +394,16 @@ ARTICLE-FOOTER
 }
 
 .issue-promotion-cover {
-    padding-bottom: 5em;
+    padding-left: 10em;
 }
 
 .issue-promotion-links {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    background-color: white;
-    /* width: 100%; */
 }
 
 
 .issue-promotion-links button{
-    /* width: 100%; */
     border: none;
     border-radius: 0.25em;
     color: white;
@@ -465,8 +425,7 @@ PROMOTED STORIES
 
 .promoted-stories {
     grid-area: promoted;
-    /* background-color: var(--gold); */
-    margin-bottom: 6em;
+    margin: 2em 0 8em 0;
 }
 
 .promoted-stories-links {
@@ -474,12 +433,9 @@ PROMOTED STORIES
     gap: 1em;
     font-weight: 600;
     font-size: 1.25rem;
-    /* background-color: red; */
 }
 
 .promoted-stories-links figure{
-    /* background-color: yellow; */
-    /* border: 1px solid green; */
     margin: 1em 0 1em 0;
 }
 
@@ -494,7 +450,6 @@ FOOTER
 footer {
     grid-area: footer;
     background-color: var(--light-grey);
-    /* height: 400px; */
 }
 
 footer h3 {
@@ -506,7 +461,6 @@ footer h3 {
 .email-signup {
     display: flex;
     gap: 1em;
-    /* justify-content: space-around; */
     margin-bottom: 1em;
 }
 
@@ -515,7 +469,6 @@ footer h3 {
     border: none;
     border-bottom: 2pt solid black;
     width: 30%;
-    /* size: 500; */
 }
 
 .email-signup button {
@@ -536,7 +489,6 @@ footer h3 {
     display: flex;
     gap: 0.5em;
     justify-content: center;
-/* background-color: red; */
 }
 
 .footer-text-links p {  
@@ -555,7 +507,6 @@ footer h3 {
 }
 
 .cookies-container {
-    /* background-color: red; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -576,35 +527,26 @@ footer h3 {
     cursor: pointer;
 }
 
-.footer-buttons {
-    /* background-color: red; */
-
-}
-
 .footer-buttons p {
     margin-bottom: 1em;
 }
 
 .footer-button-links {
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     gap: 1em;
 }
 
 .footer-footer {
-    /* background-color: red; */
     display: flex;
     justify-content: space-between;
     margin: 2em 0;
 }
 
 .back-to-top {
-    /* background-color: red; */
     display: flex;
     gap: 2em;
     align-items: center;
-
 }
 
 .back-to-top:hover {
@@ -612,7 +554,5 @@ footer h3 {
 }
 
 .back-to-top span {
-    /* display: inline; */
-    /* background-color: yellow; */
     width: 80px;
 }
